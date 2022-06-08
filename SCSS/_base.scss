@@ -1,0 +1,21 @@
+*{
+    font-family: 'Amatic SC', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----  MAIN  ---- */ 
+main{
+    margin: 20px;
+    margin-bottom: 80px;
+    h2{
+        text-align: center;
+        font-size: 70px;
+        padding: 40px ;
+    }
+    p{
+        font-family:'MP PLUS 1p', sans-serif ;
+        line-height: 2.5;
+    }
+}

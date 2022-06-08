@@ -1,0 +1,50 @@
+
+
+/*--- MEDIA QUERIES --- */
+
+@media (max-width: 1199px){
+    .destinos{
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas: "titulo titulo"
+                             "cont1 cont2"
+                             "cont3 cont4";
+        gap: 10px;
+    }
+    .contacto {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "titulo"
+        "formulario"
+        "datos";
+    }
+
+}
+
+@media (max-width: 767px){
+    .destinos{
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas: "titulo titulo"
+        "cont1 cont2"
+        "cont3 cont4"
+        ;
+        justify-items: center;
+}
+    
+         
+
+}
+
+
+
+@media (max-width: 479px) {
+    .destinos{
+        grid-template-columns: 100%;
+        grid-template-areas: "titulo"
+        "cont1" "cont2"
+        "cont3" "cont4"
+        ;
+        justify-items: center;
+}}
+
+
+ 

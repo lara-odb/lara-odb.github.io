@@ -1,0 +1,27 @@
+
+
+
+/* ----- FOOTER ----- */
+
+
+footer{
+    ul{
+        background-color: rgba(151, 216, 172, .2);
+        width: 100%;
+        display: flex; /* Para poder poner los elementos 1 al lado del otro */
+        list-style: none; 
+        justify-content: center;
+        a{
+            font-size: 25px;    
+            padding: 0 40px;
+            text-decoration: none;
+            color: #000;
+            &:hover{
+                font-weight: 700;
+            }
+
+        }
+    }
+    
+
+} 

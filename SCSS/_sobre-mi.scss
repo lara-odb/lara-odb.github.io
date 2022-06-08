@@ -1,0 +1,24 @@
+
+ 
+ /* ----- SOBRE MI ----- */
+
+
+
+ main .sobre-mi{
+    display: flex;
+    overflow: hidden; /*para que el contenido no "desborde" de la caja */
+    img{
+        margin: 0 50px 50px 30px;
+        width: 400px;
+        height: 500px;
+        border-radius: 50% ; /* redondear la imagen */
+    }
+    p{
+        font-family: 'MP PLUS 1p', sans-serif;
+        line-height: 2.5;
+        width: 100%;
+        margin-top: 60px;
+        text-align: justify;
+
+    }
+}
