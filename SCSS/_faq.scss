@@ -12,4 +12,18 @@
         text-align: justify;
 
     }
+    
+}
+
+.container{
+    .row .col-xl-6{
+        a{
+            font-family:'MP PLUS 1p', sans-serif ;;
+            color: black;
+            &:hover{
+            color: $colorPrimario;
+        }
+
+        }
+    }
 }

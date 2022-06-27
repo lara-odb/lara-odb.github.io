@@ -28,13 +28,15 @@
         "cont3 cont4"
         ;
         justify-items: center;
-}
-    
-         
+}   
+    .sobre-mi{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }      
 
 }
-
-
 
 @media (max-width: 479px) {
     .destinos{
@@ -44,7 +46,12 @@
         "cont3" "cont4"
         ;
         justify-items: center;
-}}
+}
+    .sobre-mi{
+        img{
+            display: none;
+        }
+    }
+}
 
 
- 

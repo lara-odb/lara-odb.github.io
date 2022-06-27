@@ -86,3 +86,20 @@
         }
     }
 }
+
+.row .card img{
+    &:hover{
+        opacity: .8;
+    }
+}
+
+.row .card-body{
+    li a {
+        &:hover{
+            color: $colorPrimario;
+            font-weight: bold;
+        }
+    }
+
+}
+    
