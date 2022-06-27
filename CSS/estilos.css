@@ -242,9 +242,7 @@ footer ul {
     justify-items: center; }
   .sobre-mi {
     display: flex;
-    flex-wrap: wrap; }
-    .sobre-mi img {
-      margin: auto; } }
+    flex-wrap: wrap; } }
 
 @media (max-width: 479px) {
   .destinos {
