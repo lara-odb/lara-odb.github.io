@@ -1,7 +1,29 @@
 $colorPrimario:  rgba(151, 216, 172, .5);
+$fontPrincipal:  'Amatic SC', cursive;
+$fontSecundaria: 'MP PLUS 1p', sans-serif ;
+
+@mixin tablet {
+    @media (min-width: 767px){
+       @content;
+    }
+   
+}
+
+@mixin desktop {
+   @media (min-width: 992px){
+       @content;
+   }
+}
+
+@mixin xlarge {
+   @media (min-width: 1200px){
+       @content;
+   }
+   
+}
 
 *{
-    font-family: 'Amatic SC', cursive;
+    font-family: $fontPrincipal;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,15 +32,24 @@ $colorPrimario:  rgba(151, 216, 172, .5);
 
 /* -----  MAIN  ---- */ 
 main{
-    margin: 20px;
+    margin: 10px;
     margin-bottom: 80px;
     h2{
         text-align: center;
-        font-size: 70px;
+        font-size: 40px;
         padding: 40px ;
+        @include tablet {
+            font-size: 60px;
+        }
+        @include desktop{
+            font-size: 70px;
+        }
+        @include xlarge {
+            font-size: 80px;
+        }
     }
     p{
-        font-family:'MP PLUS 1p', sans-serif ;
+        font-family: $fontSecundaria ;
         line-height: 2.5;
     }
 }

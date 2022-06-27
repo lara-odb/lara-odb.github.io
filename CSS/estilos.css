@@ -1,20 +1,29 @@
 @charset "UTF-8";
 * {
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 /* -----  MAIN  ---- */
 main {
-  margin: 20px;
+  margin: 10px;
   margin-bottom: 80px; }
   main h2 {
     text-align: center;
-    font-size: 70px;
+    font-size: 40px;
     padding: 40px; }
+    @media (min-width: 767px) {
+      main h2 {
+        font-size: 60px; } }
+    @media (min-width: 992px) {
+      main h2 {
+        font-size: 70px; } }
+    @media (min-width: 1200px) {
+      main h2 {
+        font-size: 80px; } }
   main p {
-    font-family: 'MP PLUS 1p', sans-serif;
+    font-family: "MP PLUS 1p", sans-serif;
     line-height: 2.5; }
 
 .encabezado {
@@ -52,17 +61,34 @@ main .sobre-mi {
   overflow: hidden;
   /*para que el contenido no "desborde" de la caja */ }
   main .sobre-mi img {
-    margin: 0 50px 50px 30px;
-    width: 400px;
-    height: 500px;
+    margin: auto;
     border-radius: 50%;
-    /* redondear la imagen */ }
+    /* redondear la imagen */
+    width: 250px;
+    height: 300px; }
+    @media (min-width: 767px) {
+      main .sobre-mi img {
+        width: 400px;
+        height: 500px;
+        margin-right: 30px; } }
+    @media (min-width: 992px) {
+      main .sobre-mi img {
+        width: 400px;
+        height: 500px;
+        margin-right: 40px; } }
+    @media (min-width: 1200px) {
+      main .sobre-mi img {
+        width: 500px;
+        height: 600px;
+        margin-right: 40px; } }
   main .sobre-mi p {
     font-family: 'MP PLUS 1p', sans-serif;
+    font-size: 14px;
     line-height: 2.5;
     width: 100%;
-    margin-top: 60px;
-    text-align: justify; }
+    margin: auto;
+    text-align: justify;
+    margin-top: 30px; }
 
 /* ----- FAQ ----- */
 main .faq h3 {
@@ -80,74 +106,70 @@ main .faq p {
     color: rgba(151, 216, 172, 0.5); }
 
 /* ----- DESTINOS ----- */
-.row li {
-  list-style-type: none;
-  text-align: center; }
-  .row li a {
-    text-decoration: none;
-    color: black; }
-
-.card {
+.row .card {
   border: none; }
-  .card img {
-    border: solid 1px;
-    padding: 5px;
-    height: 600px; }
-
-.destinos {
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-areas: "titulo titulo titulo titulo" "cont1 cont2 cont3 cont4";
-  gap: 5px; }
-  .destinos h2 {
-    grid-area: titulo; }
-  .destinos .cont1 {
-    grid-area: cont1; }
-  .destinos .cont2 {
-    grid-area: cont2; }
-  .destinos .cont3 {
-    grid-area: cont3; }
-  .destinos .cont4 {
-    grid-area: cont4; }
-  .destinos img {
-    width: 100%;
-    height: 500px;
+  .row .card img {
+    width: 300px;
+    height: 400px;
     border: solid 1px #000;
-    padding: 5px;
-    border-radius: 3px;
-    opacity: .9; }
-    .destinos img:hover {
-      opacity: 1; }
-  .destinos h4 {
-    text-align: center;
-    font-size: 40px; }
-    .destinos h4:hover {
-      opacity: .6; }
+    padding: 3px; }
+  .row .card .card-body {
+    align-items: center; }
+    .row .card .card-body li {
+      list-style-type: none; }
+    .row .card .card-body a {
+      text-decoration: none;
+      color: #000; }
 
-.destinos .paises ul {
-  list-style-type: none;
-  font-size: 20px; }
-
-.destinos .paises li {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700; }
-  .destinos .paises li:hover {
-    opacity: .5; }
-
-.row .card img:hover {
-  opacity: .8; }
-
-.row .card-body li a:hover {
-  color: rgba(151, 216, 172, 0.5);
-  font-weight: bold; }
+.row {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "titulo" "cont1" "cont2" "cont3" "cont4";
+  justify-items: center; }
+  .row h2 {
+    grid-area: titulo; }
+  .row .cont1 {
+    grid-area: cont1; }
+  .row .cont2 {
+    grid-area: cont2; }
+  .row .cont3 {
+    grid-area: cont3; }
+  .row .cont4 {
+    grid-area: cont4; }
+  @media (min-width: 767px) {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "titulo titulo" "cont1 cont2" "cont3 cont4";
+      gap: 5px; } }
+  @media (min-width: 992px) {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+      grid-template-rows: auto auto;
+      grid-template-areas: "titulo titulo titulo titulo" "cont1 cont2 cont3 cont4";
+      gap: 5px; } }
+  @media (min-width: 1200px) {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+      grid-template-rows: auto auto;
+      grid-template-areas: "titulo titulo titulo titulo" "cont1 cont2 cont3 cont4";
+      gap: 5px; } }
 
 /* ----- CONTACTO ----- */
 .contacto {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: auto auto;
-  grid-template-areas: "titulo titulo" "formulario datos"; }
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "titulo" "formulario" "datos"; }
+  @media (min-width: 992px) {
+    .contacto {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: auto auto;
+      grid-template-areas: "titulo titulo" "formulario datos"; } }
   .contacto h2 {
     grid-area: titulo; }
   .contacto .formulario {
@@ -202,6 +224,7 @@ main .faq p {
       font-weight: 700;
       display: inline; }
   .contacto .nuestrosDatos {
+    font-family: "MP PLUS 1p", sans-serif;
     grid-area: datos;
     padding: 20px;
     text-align: center;
@@ -225,29 +248,3 @@ footer ul {
       font-weight: 700; }
 
 /*--- MEDIA QUERIES --- */
-@media (max-width: 1199px) {
-  .destinos {
-    grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "titulo titulo" "cont1 cont2" "cont3 cont4";
-    gap: 10px; }
-  .contacto {
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "titulo" "formulario" "datos"; } }
-
-@media (max-width: 767px) {
-  .destinos {
-    grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "titulo titulo" "cont1 cont2" "cont3 cont4";
-    justify-items: center; }
-  .sobre-mi {
-    display: flex;
-    flex-wrap: wrap; } }
-
-@media (max-width: 479px) {
-  .destinos {
-    grid-template-columns: 100%;
-    grid-template-areas: "titulo" "cont1" "cont2" "cont3" "cont4";
-    justify-items: center; }
-  .sobre-mi img {
-    display: none; } }
