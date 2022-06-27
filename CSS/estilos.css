@@ -23,7 +23,7 @@ main {
       main h2 {
         font-size: 80px; } }
   main p {
-    font-family: "MP PLUS 1p", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 2.5; }
 
 .encabezado {
@@ -59,18 +59,24 @@ nav.navbar {
 main .sobre-mi {
   display: flex;
   overflow: hidden;
-  /*para que el contenido no "desborde" de la caja */ }
+  /*para que el contenido no "desborde" de la caja */
+  flex-wrap: wrap; }
+  @media (min-width: 992px) {
+    main .sobre-mi {
+      flex-wrap: nowrap; } }
+  @media (min-width: 1200px) {
+    main .sobre-mi {
+      flex-wrap: nowrap; } }
   main .sobre-mi img {
     margin: auto;
     border-radius: 50%;
     /* redondear la imagen */
-    width: 250px;
-    height: 300px; }
+    width: 150px;
+    height: 150px; }
     @media (min-width: 767px) {
       main .sobre-mi img {
-        width: 400px;
-        height: 500px;
-        margin-right: 30px; } }
+        width: 200px;
+        height: 200px; } }
     @media (min-width: 992px) {
       main .sobre-mi img {
         width: 400px;
@@ -82,77 +88,127 @@ main .sobre-mi {
         height: 600px;
         margin-right: 40px; } }
   main .sobre-mi p {
-    font-family: 'MP PLUS 1p', sans-serif;
-    font-size: 14px;
-    line-height: 2.5;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
     width: 100%;
     margin: auto;
     text-align: justify;
     margin-top: 30px; }
+    @media (min-width: 767px) {
+      main .sobre-mi p {
+        font-size: 14px; } }
+    @media (min-width: 992px) {
+      main .sobre-mi p {
+        font-size: 16px;
+        line-height: 2.5; } }
+    @media (min-width: 1200px) {
+      main .sobre-mi p {
+        font-size: 16px;
+        line-height: 2.5; } }
 
 /* ----- FAQ ----- */
-main .faq h3 {
-  font-size: 40px;
-  margin: 20px 0; }
-
-main .faq p {
-  line-height: 1.5;
-  text-align: justify; }
-
-.container .row .col-xl-6 a {
-  font-family: 'MP PLUS 1p', sans-serif;
-  color: black; }
-  .container .row .col-xl-6 a:hover {
-    color: rgba(151, 216, 172, 0.5); }
+.container .row {
+  width: 100%; }
+  .container .row h3 {
+    font-size: 20px;
+    margin-bottom: 20px; }
+    @media (min-width: 767px) {
+      .container .row h3 {
+        font-size: 30px; } }
+    @media (min-width: 992px) {
+      .container .row h3 {
+        font-size: 40px; } }
+    @media (min-width: 1200px) {
+      .container .row h3 {
+        font-size: 40px; } }
+  .container .row p {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 12px; }
+    @media (min-width: 767px) {
+      .container .row p {
+        font-size: 13px; } }
+    @media (min-width: 992px) {
+      .container .row p {
+        font-size: 13px; } }
+    @media (min-width: 1200px) {
+      .container .row p {
+        font-size: 13px; } }
+  .container .row a {
+    font-family: "Montserrat", sans-serif;
+    color: #000; }
+    .container .row a:hover {
+      background-color: rgba(151, 216, 172, 0.5); }
 
 /* ----- DESTINOS ----- */
-.row .card {
+.row-destinos .card {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   border: none; }
-  .row .card img {
+  .row-destinos .card img {
     width: 300px;
     height: 400px;
     border: solid 1px #000;
     padding: 3px; }
-  .row .card .card-body {
+  .row-destinos .card .card-body {
     align-items: center; }
-    .row .card .card-body li {
-      list-style-type: none; }
-    .row .card .card-body a {
+    .row-destinos .card .card-body h5 {
+      font-size: 20px; }
+      @media (min-width: 767px) {
+        .row-destinos .card .card-body h5 {
+          font-size: 30px; } }
+      @media (min-width: 992px) {
+        .row-destinos .card .card-body h5 {
+          font-size: 35px; } }
+      @media (min-width: 1200px) {
+        .row-destinos .card .card-body h5 {
+          font-size: 40px; } }
+    .row-destinos .card .card-body li {
+      list-style-type: none;
+      text-align: center; }
+    .row-destinos .card .card-body a {
       text-decoration: none;
       color: #000; }
+      .row-destinos .card .card-body a:hover {
+        background-color: rgba(151, 216, 172, 0.5);
+        font-weight: bold;
+        border-radius: 80%;
+        padding: 5px; }
 
-.row {
+.row-destinos {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto;
   grid-template-areas: "titulo" "cont1" "cont2" "cont3" "cont4";
   justify-items: center; }
-  .row h2 {
+  .row-destinos h2 {
     grid-area: titulo; }
-  .row .cont1 {
+  .row-destinos .cont1 {
     grid-area: cont1; }
-  .row .cont2 {
+  .row-destinos .cont2 {
     grid-area: cont2; }
-  .row .cont3 {
+  .row-destinos .cont3 {
     grid-area: cont3; }
-  .row .cont4 {
+  .row-destinos .cont4 {
     grid-area: cont4; }
   @media (min-width: 767px) {
-    .row {
+    .row-destinos {
       display: grid;
       grid-template-columns: repeat(2, 50%);
       grid-template-rows: auto auto auto;
       grid-template-areas: "titulo titulo" "cont1 cont2" "cont3 cont4";
       gap: 5px; } }
   @media (min-width: 992px) {
-    .row {
+    .row-destinos {
       display: grid;
       grid-template-columns: repeat(4, 25%);
       grid-template-rows: auto auto;
       grid-template-areas: "titulo titulo titulo titulo" "cont1 cont2 cont3 cont4";
       gap: 5px; } }
   @media (min-width: 1200px) {
-    .row {
+    .row-destinos {
       display: grid;
       grid-template-columns: repeat(4, 25%);
       grid-template-rows: auto auto;
@@ -164,12 +220,12 @@ main .faq p {
   display: grid;
   grid-template-columns: repeat(1, 100%);
   grid-template-rows: auto auto auto;
-  grid-template-areas: "titulo" "formulario" "datos"; }
+  grid-template-areas: "titulo" "formulario" "datos"; }
   @media (min-width: 992px) {
     .contacto {
       grid-template-columns: repeat(2, 50%);
       grid-template-rows: auto auto;
-      grid-template-areas: "titulo titulo" "formulario datos"; } }
+      grid-template-areas: "titulo titulo" "formulario datos"; } }
   .contacto h2 {
     grid-area: titulo; }
   .contacto .formulario {
@@ -224,27 +280,17 @@ main .faq p {
       font-weight: 700;
       display: inline; }
   .contacto .nuestrosDatos {
-    font-family: "MP PLUS 1p", sans-serif;
+    font-family: "Montserrat", sans-serif;
     grid-area: datos;
     padding: 20px;
     text-align: center;
     margin: auto;
-    font-size: 20px; }
+    font-size: 16px; }
 
 /* ----- FOOTER ----- */
-footer ul {
-  background-color: rgba(151, 216, 172, 0.2);
-  width: 100%;
-  display: flex;
-  /* Para poder poner los elementos 1 al lado del otro */
-  list-style: none;
-  justify-content: center; }
-  footer ul a {
-    font-size: 25px;
-    padding: 0 40px;
-    text-decoration: none;
-    color: #000; }
-    footer ul a:hover {
-      font-weight: 700; }
+footer {
+  width: 100%; }
+  footer p {
+    font-size: 18px; }
 
 /*--- MEDIA QUERIES --- */
