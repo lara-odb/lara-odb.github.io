@@ -27,10 +27,21 @@ main {
     line-height: 2.5; }
 
 .encabezado {
-  height: 400px;
+  height: 200px;
   display: flex;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: flex-end;
+  flex-direction: column; }
+  @media (min-width: 992px) {
+    .encabezado {
+      height: 400px;
+      flex-direction: row;
+      flex-wrap: nowrap; } }
+  @media (min-width: 1200px) {
+    .encabezado {
+      height: 500px;
+      flex-direction: row;
+      flex-wrap: nowrap; } }
   .encabezado img {
     width: 400px;
     height: 400px; }
@@ -131,10 +142,10 @@ main .sobre-mi {
         font-size: 13px; } }
     @media (min-width: 992px) {
       .container .row p {
-        font-size: 13px; } }
+        font-size: 15px; } }
     @media (min-width: 1200px) {
       .container .row p {
-        font-size: 13px; } }
+        font-size: 15px; } }
   .container .row a {
     font-family: "Montserrat", sans-serif;
     color: #000; }
@@ -181,7 +192,11 @@ main .sobre-mi {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "titulo" "cont1" "cont2" "cont3" "cont4";
+  grid-template-areas: "titulo"
+ "cont1"
+ "cont2"
+ "cont3"
+ "cont4";
   justify-items: center; }
   .row-destinos h2 {
     grid-area: titulo; }
@@ -198,21 +213,25 @@ main .sobre-mi {
       display: grid;
       grid-template-columns: repeat(2, 50%);
       grid-template-rows: auto auto auto;
-      grid-template-areas: "titulo titulo" "cont1 cont2" "cont3 cont4";
+      grid-template-areas: "titulo titulo"
+ "cont1 cont2"
+ "cont3 cont4";
       gap: 5px; } }
   @media (min-width: 992px) {
     .row-destinos {
       display: grid;
       grid-template-columns: repeat(4, 25%);
       grid-template-rows: auto auto;
-      grid-template-areas: "titulo titulo titulo titulo" "cont1 cont2 cont3 cont4";
+      grid-template-areas: "titulo titulo titulo titulo"
+ "cont1 cont2 cont3 cont4";
       gap: 5px; } }
   @media (min-width: 1200px) {
     .row-destinos {
       display: grid;
       grid-template-columns: repeat(4, 25%);
       grid-template-rows: auto auto;
-      grid-template-areas: "titulo titulo titulo titulo" "cont1 cont2 cont3 cont4";
+      grid-template-areas: "titulo titulo titulo titulo"
+ "cont1 cont2 cont3 cont4";
       gap: 5px; } }
 
 /* ----- CONTACTO ----- */
@@ -220,12 +239,15 @@ main .sobre-mi {
   display: grid;
   grid-template-columns: repeat(1, 100%);
   grid-template-rows: auto auto auto;
-  grid-template-areas: "titulo" "formulario" "datos"; }
+  grid-template-areas: "titulo"
+ "formulario"
+ "datos"; }
   @media (min-width: 992px) {
     .contacto {
       grid-template-columns: repeat(2, 50%);
       grid-template-rows: auto auto;
-      grid-template-areas: "titulo titulo" "formulario datos"; } }
+      grid-template-areas: "titulo titulo"
+ "formulario datos"; } }
   .contacto h2 {
     grid-area: titulo; }
   .contacto .formulario {
